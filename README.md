@@ -1,11 +1,16 @@
 # SCA Admin - School Management System (PHP)
 
+[![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)](https://www.php.net/)
+[![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
+
 A comprehensive, modern web-based application designed to manage school operations efficiently. Built with PHP, this system features a sleek admin dashboard to handle student admissions, attendance, results, and fee management for administrators, teachers, and students.
 
 ## 📸 Application Previews
 
 ### Secure Login Portal
-![Login Portal](screenshots/login_page.png)
+![Login Portal](screenshots/login.png)
 *Role-based login for Students, Teachers, Admins, and Guardians.*
 
 ### Dashboard Overview
