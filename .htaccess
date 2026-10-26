@@ -1,0 +1,25 @@
+Options -MultiViews
+DirectoryIndex index.php
+
+RewriteEngine On
+RewriteBase /sms/
+
+# Redirect only real frontend PHP page requests to extensionless URLs.
+RewriteCond %{THE_REQUEST} \s/+sms/(.+?)\.php(?:\?.*)?\s [NC]
+RewriteCond %{REQUEST_URI} !^/sms/backend/ [NC]
+RewriteCond %{REQUEST_URI} !^/sms/assets/ [NC]
+RewriteCond %{REQUEST_URI} !^/sms/vendor/ [NC]
+RewriteRule ^ /sms/%1 [R=301,L,NE]
+
+# Serve extensionless frontend URLs by mapping them to the matching PHP file.
+RewriteCond %{REQUEST_URI} !^/sms/backend/ [NC]
+RewriteCond %{REQUEST_URI} !^/sms/assets/ [NC]
+RewriteCond %{REQUEST_URI} !^/sms/vendor/ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+)$ $1.php [L,QSA]
+
+# Remove trailing slashes without affecting the backend.
+RewriteCond %{REQUEST_URI} !^/sms/backend/ [NC]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /sms/$1 [R=301,L]

@@ -1,0 +1,119 @@
+/* Teacher Sidebar (shared with backend/teacher_sidebar.php) */
+:root {
+  --teacher-sidebar-width: 260px;
+  --teacher-primary: #4f46e5;
+  --teacher-bg: #1f2937;
+  --teacher-submenu-bg: rgba(0, 0, 0, 0.20);
+}
+
+/* Base sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--teacher-sidebar-width);
+  height: 100vh;
+  background: linear-gradient(180deg, #1f2937 0%, #111827 100%);
+  color: #fff;
+  z-index: 1000;
+  overflow-y: auto;
+  box-shadow: 10px 0 30px rgba(0, 0, 0, 0.15);
+}
+
+.sidebar-brand {
+  padding: 18px 20px;
+  font-size: 1.25rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sidebar-brand i {
+  color: var(--teacher-primary);
+}
+
+.sidebar-menu {
+  padding: 12px 0;
+}
+
+.menu-section {
+  padding: 10px 20px 6px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 11px 20px;
+  gap: 12px;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-item i {
+  width: 22px;
+  text-align: center;
+}
+
+.menu-item:hover,
+.menu-item.active {
+  background: rgba(79, 70, 229, 0.22);
+  color: #fff;
+  border-left: 3px solid #818cf8;
+  padding-left: 17px; /* compensate border */
+}
+
+/* Dropdown */
+.menu-item.has-dropdown {
+  position: relative;
+}
+
+.submenu {
+  background: var(--teacher-submenu-bg);
+  overflow: hidden;
+}
+
+.submenu-item {
+  display: block;
+  padding: 10px 20px 10px 52px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.62);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.submenu-item:hover {
+  color: #fff;
+  background: rgba(79, 70, 229, 0.15);
+}
+
+@media (max-width: 992px) {
+  .sidebar {
+    width: 70px;
+  }
+
+  .sidebar-brand span,
+  .menu-item span,
+  .menu-section,
+  .submenu {
+    display: none;
+  }
+
+  .menu-item {
+    justify-content: center;
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .submenu {
+    display: none;
+  }
+}
+

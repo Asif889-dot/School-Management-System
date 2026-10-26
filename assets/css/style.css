@@ -1,0 +1,135 @@
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --accent-purple: #764ba2;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f3f8;
+            background-image: linear-gradient(rgba(240, 243, 248, 0.9), rgba(240, 243, 248, 0.9)),
+                url('https://img.freepik.com/free-vector/e-learning-infographic-set_1284-16836.jpg?semt=ais_rp_progressive&w=740&q=80');
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .character-frame {
+            position: relative;
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .img-student {
+            width: 42%;
+            height: auto;
+        }
+
+        .img-graduating {
+            width: 45%;
+            height: auto;
+            position: relative;
+            z-index: 2;
+        }
+        .visual-overlay-text {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--accent-purple);
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Form Styling */
+        .form-floating>.form-control:focus~label,
+        .form-floating>.form-control:not(:placeholder-shown)~label {
+            color: var(--accent-purple);
+            font-weight: 600;
+        }
+
+        .form-control {
+            border: 2px solid #e1e7f0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            background-color: #fbfcfe;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: #667eea;
+            box-shadow: 0 0 0 5px rgba(102, 126, 234, 0.1);
+        }
+
+        /* Password Toggle Styling */
+        .password-input-group {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #b0bac9;
+            z-index: 10;
+        }
+
+        .btn-primary {
+            background: var(--primary-gradient);
+            border: none;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(118, 75, 162, 0.2);
+            opacity: 0.95;
+        }
+
+        .role-selector-badge {
+            cursor: pointer;
+            padding: 9px 18px;
+            border-radius: 30px;
+            border: 2px solid #e1e7f0;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #5d6d84;
+            transition: 0.3s;
+        }
+
+        .role-selector-badge.active {
+            background: var(--accent-purple);
+            color: white;
+            border-color: var(--accent-purple);
+        }
+
+        @media (max-width: 768px) {
+            .login-card {
+                border-radius: 20px;
+            }
+
+            .login-img-panel {
+                padding: 15px;
+                min-height: 250px;
+            }
+
+            .character-frame {
+                height: 200px;
+                align-items: flex-end;
+            }
+
+            .visual-overlay-text {
+                font-size: 0.9rem;
+            }
+        }
