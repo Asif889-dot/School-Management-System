@@ -4,6 +4,10 @@ A comprehensive, modern web-based application designed to manage school operatio
 
 ## 📸 Application Previews
 
+### Secure Login Portal
+![Login Portal](screenshots/login.png)
+*Role-based login for Students, Teachers, Admins, and Guardians.*
+
 ### Dashboard Overview
 ![Dashboard Overview](screenshots/dashboard.png)
 *Real-time metrics for student admissions, active teachers, and fee collections.*
