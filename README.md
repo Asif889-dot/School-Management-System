@@ -40,12 +40,19 @@ A comprehensive, modern web-based application designed to manage school operatio
 ## 🛠️ Tech Stack
 - **Backend:** PHP
 - **Database:** MySQL
-- **Frontend:** HTML, CSS (Custom UI), JavaScript
+- **Frontend:** HTML, CSS, JavaScript
+- **Dependency Manager:** Composer
 
-## ⚙️ Installation & Setup
+## 📂 Project Structure
 
-To get this project running on your local machine, follow these steps:
-
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Asif889-dot/School-Management-System-SMS-In-PHP.git
+```text
+SMS/
+├── assets/          # CSS, JS, Images, and Frontend libraries
+├── backend/         # Core PHP logic, Controllers, and Models
+├── frontend/        # Views, UI templates, and Layouts
+├── uploads/         # Directory for student photos/documents
+├── vendor/          # Composer dependencies (Ignored in Git)
+├── .htaccess        # Apache configuration
+├── composer.json    # PHP package dependencies
+├── database_migrations.sql # Database schema
+└── index.php        # Application entry point
